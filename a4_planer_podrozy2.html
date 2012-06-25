@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title>Stalexport Autostrada Małopolska S.A.</title>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+
+    <meta name="Description" content="" />
+    <meta name="Keywords" content="" />
+    <meta name="Author" content="Igor Rzegocki" />
+    <meta name="Copyright" content="Copyright (c) 2010 Igor Rzegocki" />
+
+    <meta name="Robots" content="index, follow" />
+    <meta name="Revisit-after" content="7 days" />
+
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link href="static/main/style/a4.css" media="screen" rel="Stylesheet" type="text/css" />
+    <script type="text/javascript" src="static/main/js/jquery.js"></script>
+    <script type="text/javascript" src="static/main/js/a4.js"></script>
+</head>
+<body class="planer">
+    <div id="map">
+        <div id="mainmap">
+        </div>
+        <div id="mapcontent">
+            <div id="mapmenu">
+                <div class="content">
+                    <h1 class="logo">Stalexport Autostrada Małopolska S.A.</h1>
+                    <h2 class="icon planer">Planer podróży</h2>
+                    <form action="" method="get">
+                        <fieldset>
+                            <dl>
+                                <dt><label for="from">Adres początkowy:</label></dt>
+                                <dd>
+                                    <input type="text" name="from" id="from" value="ul. Nazwa Ulicy 123, Miejscowość" />
+                                </dd>
+                                <dt><label for="to">Adres docelowy:</label></dt>
+                                <dd>
+                                    <input type="text" name="to" id="to" value="ul. Nazwa Ulicy 123, Miejscowość" />
+                                </dd>
+                            </dl>
+                            <button type="submit" name="submit"><div><p>Wyznacz trasę</p></div></button>
+                        </fieldset>
+                    </form>
+                    <h2 class="icon calc">Kalkulator kosztów przejazdu</h2>
+                    <form action="" method="post" class="formcalc">
+                        <fieldset>
+                            <ul class="categories">
+                                <li>
+                                    <label class="c1" for="category_1">
+                                        <input type="radio" name="category" value="1" id="category_1" />
+                                        Kategoria 1
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="c23" for="category_23">
+                                        <input type="radio" name="category" value="23" id="category_23" />
+                                        Kategoria 2 i 3
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="c45" for="category_45">
+                                        <input type="radio" name="category" value="45" id="category_45" />
+                                        Kategoria 4 i 5
+                                        <cite>Bez ważnej karty opłaty drogowej (winiety) <span>*</span></cite>
+                                    </label>
+                                </li>
+                            </ul>
+                            <button type="submit" name="submit"><div><p>Oblicz koszt</p></div></button>
+                            <input type="text" name="cost" class="cost" value="0,00 zł" readonly="readonly" />
+                            <cite class="asteriks"><span>*</span> Pojazdy z ważną kartą opłaty drogowej są zwolnione z opłat za przejazd autostradami</cite>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div id="maplegend">
+                <form action="" method="get">
+                    <fieldset>
+                        <a class="back" href="">Powrót do <strong>Serwisu</strong></a>
+                        <dl>
+                            <dt><span>Pokaż na mapie:</span></dt>
+                            <dd>
+                                <ul>
+                                    <li class="t1"><label for="type_1"><input type="checkbox" name="type_1" id="type_1" /> <span>Węzeł</span></label></li>
+                                    <li class="t2"><label for="type_2"><input type="checkbox" name="type_2" id="type_2" /> <span>Plac Poboru Opłat&nbsp;(PPO)</span></label></li>
+                                    <li class="t3"><label for="type_3"><input type="checkbox" name="type_3" id="type_3" /> <span>Miejsce Obsługi Podróżnych&nbsp;(MOP)</span></label></li>
+                                    <li class="t4"><label for="type_4"><input type="checkbox" name="type_4" id="type_4" /> <span>Stacja benzynowa</span></label></li>
+                                    <li class="t5"><label for="type_5"><input type="checkbox" name="type_5" id="type_5" /> <span>Parking z toaletami</span></label></li>
+                                    <li class="t6"><label for="type_6"><input type="checkbox" name="type_6" id="type_6" /> <span>Posterunek policji</span></label></li>
+                                    <li class="t7"><label for="type_7"><input type="checkbox" name="type_7" id="type_7" /> <span>Zachowaj ostrożność</span></label></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
